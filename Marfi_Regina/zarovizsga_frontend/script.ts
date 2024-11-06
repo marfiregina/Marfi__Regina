@@ -4,8 +4,8 @@ function osszesOszto(number: number): number[] {
   for (var i: number = 1; i <= number; i++) {
     if (number % i == 0) {
       numberDevisors.push(i);
-    }
-  }
+    };
+  };
   return numberDevisors;
 }
 
@@ -14,8 +14,8 @@ function parosDarab(numberArray: number[]): number {
   for (var i: number = 0; i < numberArray.length; i++) {
     if (numberArray[i] % 2 == 0) {
       evenNumbersInTheNumberArray++;
-    }
-  }
+    };
+  };
   return evenNumbersInTheNumberArray;
 }
 
@@ -25,11 +25,13 @@ function fuggvenyhivasPalindrom(getFunction: Function) {
   var functionTextBackwards: string = "";
 
   for (var i: number = functionText.length - 1; i >= 0; i--) {
-    functionTextBackwards += functionText[i];
-  }
+    if (functionText[i] !== " ") {
+      functionTextBackwards += functionText[i];
+    };
+  };
 
   if (functionText == functionTextBackwards) {
     isFunctionTextPalindrome = true;
-  }
+  };
   return isFunctionTextPalindrome;
 }

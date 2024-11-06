@@ -4,7 +4,9 @@ function osszesOszto(number) {
         if (number % i == 0) {
             numberDevisors.push(i);
         }
+        ;
     }
+    ;
     return numberDevisors;
 }
 function parosDarab(numberArray) {
@@ -13,7 +15,9 @@ function parosDarab(numberArray) {
         if (numberArray[i] % 2 == 0) {
             evenNumbersInTheNumberArray++;
         }
+        ;
     }
+    ;
     return evenNumbersInTheNumberArray;
 }
 function fuggvenyhivasPalindrom(getFunction) {
@@ -21,10 +25,15 @@ function fuggvenyhivasPalindrom(getFunction) {
     var isFunctionTextPalindrome = false;
     var functionTextBackwards = "";
     for (var i = functionText.length - 1; i >= 0; i--) {
-        functionTextBackwards += functionText[i];
+        if (functionText[i] !== " ") {
+            functionTextBackwards += functionText[i];
+        }
+        ;
     }
+    ;
     if (functionText == functionTextBackwards) {
         isFunctionTextPalindrome = true;
     }
+    ;
     return isFunctionTextPalindrome;
 }
